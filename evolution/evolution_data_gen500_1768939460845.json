@@ -1,0 +1,5038 @@
+{
+  "metadata": {
+    "exportDate": "2026-01-20T20:04:20.843Z",
+    "totalGenerations": 500,
+    "config": {
+      "INITIAL_HUNTERS": 8,
+      "INITIAL_RUNNERS": 12,
+      "BASE_SIZE": 12,
+      "BASE_SPEED": 1.2,
+      "BASE_VISION": 50,
+      "VISION_ANGLE": 1.8849555921538759,
+      "BREED_COOLDOWN": 180,
+      "BREED_DISTANCE": 40,
+      "MUTATION_RATE": 0.15,
+      "MUTATION_STRENGTH": 15,
+      "COLLISION_DAMAGE": 10,
+      "ENERGY_DECAY": 0.05,
+      "FRIENDLY_DAMAGE_MULTIPLIER": 0.1,
+      "ENEMY_DAMAGE_MULTIPLIER": 1,
+      "GENERATION_TIME": 2000,
+      "EVOLUTION_STRENGTH": 0.3,
+      "TOP_RUNNERS_COUNT": 5,
+      "TOP_HUNTERS_COUNT": 5,
+      "BREED_ENABLED": true,
+      "BREED_PAIRS_COUNT": 3,
+      "CHILD_PER_PAIR": 2,
+      "MIN_HUNTERS": 3,
+      "MAX_HUNTERS": 25,
+      "MIN_RUNNERS": 5,
+      "MAX_RUNNERS": 30,
+      "POPULATION_GROWTH_FACTOR": 1.5,
+      "SURVIVED_HUNTERS": 25,
+      "SURVIVED_RUNNERS": 30
+    }
+  },
+  "history": [
+    {
+      "generation": 1,
+      "timestamp": "2026-01-20T20:01:58.878Z",
+      "huntersCount": 8,
+      "runnersCount": 12,
+      "collisions": 48,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 64.46,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 2,
+      "timestamp": "2026-01-20T20:01:59.156Z",
+      "huntersCount": 12,
+      "runnersCount": 18,
+      "collisions": 137,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 57.9,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 3,
+      "timestamp": "2026-01-20T20:01:59.434Z",
+      "huntersCount": 18,
+      "runnersCount": 25,
+      "collisions": 277,
+      "avgHunterKills": 0.11,
+      "avgRunnerHealth": 51.66,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 4,
+      "timestamp": "2026-01-20T20:01:59.711Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 421,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 44.04,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 5,
+      "timestamp": "2026-01-20T20:01:59.989Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 418,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 46.75,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 6,
+      "timestamp": "2026-01-20T20:02:00.267Z",
+      "huntersCount": 25,
+      "runnersCount": 23,
+      "collisions": 464,
+      "avgHunterKills": 0.24,
+      "avgRunnerHealth": 43.64,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 7,
+      "timestamp": "2026-01-20T20:02:00.545Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 444,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 42.34,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 8,
+      "timestamp": "2026-01-20T20:02:00.823Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 373,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 40.79,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 9,
+      "timestamp": "2026-01-20T20:02:01.100Z",
+      "huntersCount": 25,
+      "runnersCount": 23,
+      "collisions": 425,
+      "avgHunterKills": 0.28,
+      "avgRunnerHealth": 44.35,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 10,
+      "timestamp": "2026-01-20T20:02:01.378Z",
+      "huntersCount": 25,
+      "runnersCount": 24,
+      "collisions": 446,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 44.73,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 11,
+      "timestamp": "2026-01-20T20:02:01.656Z",
+      "huntersCount": 25,
+      "runnersCount": 22,
+      "collisions": 513,
+      "avgHunterKills": 0.24,
+      "avgRunnerHealth": 38.38,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 12,
+      "timestamp": "2026-01-20T20:02:01.934Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 407,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 43.4,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 13,
+      "timestamp": "2026-01-20T20:02:02.211Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 436,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 40.17,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 14,
+      "timestamp": "2026-01-20T20:02:02.489Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 473,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 42.51,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 15,
+      "timestamp": "2026-01-20T20:02:02.767Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 380,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 47.02,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 16,
+      "timestamp": "2026-01-20T20:02:03.045Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 441,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 58.99,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 17,
+      "timestamp": "2026-01-20T20:02:03.322Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 441,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 50.69,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 18,
+      "timestamp": "2026-01-20T20:02:03.601Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 471,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 66.53,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 19,
+      "timestamp": "2026-01-20T20:02:03.878Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 396,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 60.03,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 20,
+      "timestamp": "2026-01-20T20:02:04.156Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 397,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 66.77,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 21,
+      "timestamp": "2026-01-20T20:02:04.434Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 456,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 54.69,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 22,
+      "timestamp": "2026-01-20T20:02:04.711Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 427,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 59.79,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 23,
+      "timestamp": "2026-01-20T20:02:04.989Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 415,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 62.23,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 24,
+      "timestamp": "2026-01-20T20:02:05.267Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 424,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 61.8,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 25,
+      "timestamp": "2026-01-20T20:02:05.545Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 395,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 59.12,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 26,
+      "timestamp": "2026-01-20T20:02:05.822Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 424,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 55.96,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 27,
+      "timestamp": "2026-01-20T20:02:06.100Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 381,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 67.59,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 28,
+      "timestamp": "2026-01-20T20:02:06.378Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 417,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 70.11,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 29,
+      "timestamp": "2026-01-20T20:02:06.656Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 341,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 67.97,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 30,
+      "timestamp": "2026-01-20T20:02:06.934Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 351,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 65.98,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 31,
+      "timestamp": "2026-01-20T20:02:07.211Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 391,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 63.13,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 32,
+      "timestamp": "2026-01-20T20:02:07.489Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 397,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 67.14,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 33,
+      "timestamp": "2026-01-20T20:02:07.767Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 422,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 59.24,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 34,
+      "timestamp": "2026-01-20T20:02:08.045Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 399,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 66.08,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 35,
+      "timestamp": "2026-01-20T20:02:08.322Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 348,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 72.91,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 36,
+      "timestamp": "2026-01-20T20:02:08.601Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 408,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 67.36,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 37,
+      "timestamp": "2026-01-20T20:02:08.878Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 418,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 68.93,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 38,
+      "timestamp": "2026-01-20T20:02:09.156Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 464,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 67.36,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 39,
+      "timestamp": "2026-01-20T20:02:09.434Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 388,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 74.56,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 40,
+      "timestamp": "2026-01-20T20:02:09.711Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 358,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 76.13,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 41,
+      "timestamp": "2026-01-20T20:02:09.989Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 384,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 82.35,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 42,
+      "timestamp": "2026-01-20T20:02:10.267Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 381,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 73.73,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 43,
+      "timestamp": "2026-01-20T20:02:10.544Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 395,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 73.66,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 44,
+      "timestamp": "2026-01-20T20:02:10.822Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 436,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 81.36,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 45,
+      "timestamp": "2026-01-20T20:02:11.100Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 428,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 71.45,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 46,
+      "timestamp": "2026-01-20T20:02:11.378Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 453,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 70.19,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 47,
+      "timestamp": "2026-01-20T20:02:11.656Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 473,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 70.64,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 48,
+      "timestamp": "2026-01-20T20:02:11.933Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 424,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 71.35,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 49,
+      "timestamp": "2026-01-20T20:02:12.212Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 420,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 67.84,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 50,
+      "timestamp": "2026-01-20T20:02:12.489Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 438,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 61.02,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 51,
+      "timestamp": "2026-01-20T20:02:12.767Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 481,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 62.85,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 52,
+      "timestamp": "2026-01-20T20:02:13.045Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 444,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 62.92,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 53,
+      "timestamp": "2026-01-20T20:02:13.322Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 558,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 66.16,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 54,
+      "timestamp": "2026-01-20T20:02:13.600Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 532,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 62.86,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 55,
+      "timestamp": "2026-01-20T20:02:13.878Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 521,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 53.08,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 56,
+      "timestamp": "2026-01-20T20:02:14.156Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 409,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 66.79,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 57,
+      "timestamp": "2026-01-20T20:02:14.434Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 456,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 66.55,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 58,
+      "timestamp": "2026-01-20T20:02:14.711Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 457,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 68.63,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 59,
+      "timestamp": "2026-01-20T20:02:14.989Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 438,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 84.16,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 60,
+      "timestamp": "2026-01-20T20:02:15.267Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 458,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 77.19,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 61,
+      "timestamp": "2026-01-20T20:02:15.545Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 528,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 68.08,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 62,
+      "timestamp": "2026-01-20T20:02:15.822Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 490,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 65.23,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 63,
+      "timestamp": "2026-01-20T20:02:16.100Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 481,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 65.86,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 64,
+      "timestamp": "2026-01-20T20:02:16.378Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 476,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 71.67,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 65,
+      "timestamp": "2026-01-20T20:02:16.656Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 439,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 66.68,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 66,
+      "timestamp": "2026-01-20T20:02:16.934Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 487,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 69.63,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 67,
+      "timestamp": "2026-01-20T20:02:17.212Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 445,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 75.21,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 68,
+      "timestamp": "2026-01-20T20:02:17.489Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 470,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 68.51,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 69,
+      "timestamp": "2026-01-20T20:02:17.767Z",
+      "huntersCount": 25,
+      "runnersCount": 21,
+      "collisions": 467,
+      "avgHunterKills": 0.36,
+      "avgRunnerHealth": 60.64,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 70,
+      "timestamp": "2026-01-20T20:02:18.045Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 497,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 56.89,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 71,
+      "timestamp": "2026-01-20T20:02:18.322Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 451,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 62,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 72,
+      "timestamp": "2026-01-20T20:02:18.600Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 482,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 70.52,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 73,
+      "timestamp": "2026-01-20T20:02:18.878Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 463,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 74.11,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 74,
+      "timestamp": "2026-01-20T20:02:19.156Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 466,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 86.83,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 75,
+      "timestamp": "2026-01-20T20:02:19.433Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 495,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 61.03,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 76,
+      "timestamp": "2026-01-20T20:02:19.711Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 513,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 62.44,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 77,
+      "timestamp": "2026-01-20T20:02:19.989Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 453,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 66.44,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 78,
+      "timestamp": "2026-01-20T20:02:20.267Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 505,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 68.33,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 79,
+      "timestamp": "2026-01-20T20:02:20.545Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 477,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 88.76,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 80,
+      "timestamp": "2026-01-20T20:02:20.823Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 480,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 80.59,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 81,
+      "timestamp": "2026-01-20T20:02:21.100Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 489,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 67.1,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 82,
+      "timestamp": "2026-01-20T20:02:21.378Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 512,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 69.51,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 83,
+      "timestamp": "2026-01-20T20:02:21.656Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 507,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 59.79,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 84,
+      "timestamp": "2026-01-20T20:02:21.933Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 484,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 71.81,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 85,
+      "timestamp": "2026-01-20T20:02:22.211Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 489,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 65.76,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 86,
+      "timestamp": "2026-01-20T20:02:22.489Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 482,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 67.67,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 87,
+      "timestamp": "2026-01-20T20:02:22.767Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 494,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 68.57,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 88,
+      "timestamp": "2026-01-20T20:02:23.046Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 511,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 69.72,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 89,
+      "timestamp": "2026-01-20T20:02:23.323Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 439,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 68.02,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 90,
+      "timestamp": "2026-01-20T20:02:23.600Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 530,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 55.26,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 91,
+      "timestamp": "2026-01-20T20:02:23.878Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 506,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 65.14,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 92,
+      "timestamp": "2026-01-20T20:02:24.155Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 435,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 69.28,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 93,
+      "timestamp": "2026-01-20T20:02:24.433Z",
+      "huntersCount": 25,
+      "runnersCount": 24,
+      "collisions": 482,
+      "avgHunterKills": 0.24,
+      "avgRunnerHealth": 53.59,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 94,
+      "timestamp": "2026-01-20T20:02:24.711Z",
+      "huntersCount": 25,
+      "runnersCount": 23,
+      "collisions": 532,
+      "avgHunterKills": 0.28,
+      "avgRunnerHealth": 42.73,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 95,
+      "timestamp": "2026-01-20T20:02:24.989Z",
+      "huntersCount": 25,
+      "runnersCount": 21,
+      "collisions": 499,
+      "avgHunterKills": 0.32,
+      "avgRunnerHealth": 63.07,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 96,
+      "timestamp": "2026-01-20T20:02:25.267Z",
+      "huntersCount": 25,
+      "runnersCount": 20,
+      "collisions": 497,
+      "avgHunterKills": 0.36,
+      "avgRunnerHealth": 55.76,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 97,
+      "timestamp": "2026-01-20T20:02:25.545Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 543,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 57.47,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 98,
+      "timestamp": "2026-01-20T20:02:25.822Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 475,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 51.36,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 99,
+      "timestamp": "2026-01-20T20:02:26.100Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 490,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 67.49,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 100,
+      "timestamp": "2026-01-20T20:02:26.378Z",
+      "huntersCount": 25,
+      "runnersCount": 22,
+      "collisions": 500,
+      "avgHunterKills": 0.28,
+      "avgRunnerHealth": 52.82,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 101,
+      "timestamp": "2026-01-20T20:02:26.655Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 517,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 52.26,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 102,
+      "timestamp": "2026-01-20T20:02:26.933Z",
+      "huntersCount": 25,
+      "runnersCount": 24,
+      "collisions": 445,
+      "avgHunterKills": 0.24,
+      "avgRunnerHealth": 61.45,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 103,
+      "timestamp": "2026-01-20T20:02:27.211Z",
+      "huntersCount": 25,
+      "runnersCount": 22,
+      "collisions": 548,
+      "avgHunterKills": 0.32,
+      "avgRunnerHealth": 42.55,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 104,
+      "timestamp": "2026-01-20T20:02:27.489Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 457,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 51.21,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 105,
+      "timestamp": "2026-01-20T20:02:27.766Z",
+      "huntersCount": 25,
+      "runnersCount": 24,
+      "collisions": 519,
+      "avgHunterKills": 0.24,
+      "avgRunnerHealth": 73.67,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 106,
+      "timestamp": "2026-01-20T20:02:28.045Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 456,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 64.42,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 107,
+      "timestamp": "2026-01-20T20:02:28.322Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 442,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 64.1,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 108,
+      "timestamp": "2026-01-20T20:02:28.600Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 527,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 50.33,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 109,
+      "timestamp": "2026-01-20T20:02:28.878Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 531,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 55.12,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 110,
+      "timestamp": "2026-01-20T20:02:29.156Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 455,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 69.74,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 111,
+      "timestamp": "2026-01-20T20:02:29.433Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 544,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 59.75,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 112,
+      "timestamp": "2026-01-20T20:02:29.711Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 452,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 70.98,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 113,
+      "timestamp": "2026-01-20T20:02:29.989Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 465,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 61.41,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 114,
+      "timestamp": "2026-01-20T20:02:30.267Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 541,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 58.78,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 115,
+      "timestamp": "2026-01-20T20:02:30.544Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 543,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 61.45,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 116,
+      "timestamp": "2026-01-20T20:02:30.822Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 486,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 68.12,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 117,
+      "timestamp": "2026-01-20T20:02:31.100Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 482,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 62.16,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 118,
+      "timestamp": "2026-01-20T20:02:31.378Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 478,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 63.62,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 119,
+      "timestamp": "2026-01-20T20:02:31.655Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 544,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 60.54,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 120,
+      "timestamp": "2026-01-20T20:02:31.933Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 474,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 72.96,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 121,
+      "timestamp": "2026-01-20T20:02:32.211Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 480,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 55.63,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 122,
+      "timestamp": "2026-01-20T20:02:32.488Z",
+      "huntersCount": 25,
+      "runnersCount": 23,
+      "collisions": 485,
+      "avgHunterKills": 0.24,
+      "avgRunnerHealth": 52.05,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 123,
+      "timestamp": "2026-01-20T20:02:32.766Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 501,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 62.85,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 124,
+      "timestamp": "2026-01-20T20:02:33.044Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 432,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 72.8,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 125,
+      "timestamp": "2026-01-20T20:02:33.322Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 534,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 77.64,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 126,
+      "timestamp": "2026-01-20T20:02:33.600Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 533,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 71.62,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 127,
+      "timestamp": "2026-01-20T20:02:33.878Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 515,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 70.64,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 128,
+      "timestamp": "2026-01-20T20:02:34.155Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 462,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 67.79,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 129,
+      "timestamp": "2026-01-20T20:02:34.434Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 540,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 56.73,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 130,
+      "timestamp": "2026-01-20T20:02:34.712Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 470,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 61.51,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 131,
+      "timestamp": "2026-01-20T20:02:34.989Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 487,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 68.18,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 132,
+      "timestamp": "2026-01-20T20:02:35.266Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 561,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 55.36,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 133,
+      "timestamp": "2026-01-20T20:02:35.544Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 534,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 62.26,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 134,
+      "timestamp": "2026-01-20T20:02:35.822Z",
+      "huntersCount": 25,
+      "runnersCount": 24,
+      "collisions": 615,
+      "avgHunterKills": 0.24,
+      "avgRunnerHealth": 54.72,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 135,
+      "timestamp": "2026-01-20T20:02:36.100Z",
+      "huntersCount": 25,
+      "runnersCount": 24,
+      "collisions": 486,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 59.3,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 136,
+      "timestamp": "2026-01-20T20:02:36.377Z",
+      "huntersCount": 25,
+      "runnersCount": 24,
+      "collisions": 539,
+      "avgHunterKills": 0.24,
+      "avgRunnerHealth": 53.36,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 137,
+      "timestamp": "2026-01-20T20:02:36.655Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 523,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 55.06,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 138,
+      "timestamp": "2026-01-20T20:02:36.933Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 490,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 67.83,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 139,
+      "timestamp": "2026-01-20T20:02:37.211Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 484,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 67.67,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 140,
+      "timestamp": "2026-01-20T20:02:37.489Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 558,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 55.89,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 141,
+      "timestamp": "2026-01-20T20:02:37.766Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 498,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 63.29,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 142,
+      "timestamp": "2026-01-20T20:02:38.044Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 540,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 61.04,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 143,
+      "timestamp": "2026-01-20T20:02:38.322Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 477,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 69.21,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 144,
+      "timestamp": "2026-01-20T20:02:38.600Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 497,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 54.93,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 145,
+      "timestamp": "2026-01-20T20:02:38.878Z",
+      "huntersCount": 25,
+      "runnersCount": 24,
+      "collisions": 543,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 62.84,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 146,
+      "timestamp": "2026-01-20T20:02:39.155Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 541,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 64.99,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 147,
+      "timestamp": "2026-01-20T20:02:39.433Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 512,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 63.41,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 148,
+      "timestamp": "2026-01-20T20:02:39.711Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 566,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 53.22,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 149,
+      "timestamp": "2026-01-20T20:02:39.989Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 627,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 45.01,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 150,
+      "timestamp": "2026-01-20T20:02:40.267Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 533,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 61.79,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 151,
+      "timestamp": "2026-01-20T20:02:40.544Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 543,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 52.76,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 152,
+      "timestamp": "2026-01-20T20:02:40.822Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 521,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 66.69,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 153,
+      "timestamp": "2026-01-20T20:02:41.099Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 543,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 61.93,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 154,
+      "timestamp": "2026-01-20T20:02:41.377Z",
+      "huntersCount": 25,
+      "runnersCount": 24,
+      "collisions": 573,
+      "avgHunterKills": 0.24,
+      "avgRunnerHealth": 47.11,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 155,
+      "timestamp": "2026-01-20T20:02:41.656Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 533,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 52.27,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 156,
+      "timestamp": "2026-01-20T20:02:41.933Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 485,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 45.19,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 157,
+      "timestamp": "2026-01-20T20:02:42.211Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 481,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 54.37,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 158,
+      "timestamp": "2026-01-20T20:02:42.489Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 509,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 54.21,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 159,
+      "timestamp": "2026-01-20T20:02:42.766Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 460,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 63.1,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 160,
+      "timestamp": "2026-01-20T20:02:43.044Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 530,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 67.16,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 161,
+      "timestamp": "2026-01-20T20:02:43.323Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 484,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 61.25,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 162,
+      "timestamp": "2026-01-20T20:02:43.600Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 516,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 51.52,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 163,
+      "timestamp": "2026-01-20T20:02:43.878Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 491,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 57.79,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 164,
+      "timestamp": "2026-01-20T20:02:44.155Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 556,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 46.53,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 165,
+      "timestamp": "2026-01-20T20:02:44.433Z",
+      "huntersCount": 25,
+      "runnersCount": 24,
+      "collisions": 603,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 49.74,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 166,
+      "timestamp": "2026-01-20T20:02:44.711Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 508,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 54.7,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 167,
+      "timestamp": "2026-01-20T20:02:44.989Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 527,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 59.67,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 168,
+      "timestamp": "2026-01-20T20:02:45.266Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 523,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 70.11,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 169,
+      "timestamp": "2026-01-20T20:02:45.545Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 502,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 49.83,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 170,
+      "timestamp": "2026-01-20T20:02:45.822Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 545,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 57,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 171,
+      "timestamp": "2026-01-20T20:02:46.100Z",
+      "huntersCount": 25,
+      "runnersCount": 25,
+      "collisions": 475,
+      "avgHunterKills": 0.2,
+      "avgRunnerHealth": 54.2,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 172,
+      "timestamp": "2026-01-20T20:02:46.378Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 417,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 64.66,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 173,
+      "timestamp": "2026-01-20T20:02:46.655Z",
+      "huntersCount": 25,
+      "runnersCount": 26,
+      "collisions": 488,
+      "avgHunterKills": 0.16,
+      "avgRunnerHealth": 66.43,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 174,
+      "timestamp": "2026-01-20T20:02:46.933Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 462,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 75.33,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 175,
+      "timestamp": "2026-01-20T20:02:47.211Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 429,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 74.11,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 176,
+      "timestamp": "2026-01-20T20:02:47.488Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 428,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 76.28,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 177,
+      "timestamp": "2026-01-20T20:02:47.767Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 473,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 82.4,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 178,
+      "timestamp": "2026-01-20T20:02:48.044Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 433,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 86.67,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 179,
+      "timestamp": "2026-01-20T20:02:48.323Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 438,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 95.37,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 180,
+      "timestamp": "2026-01-20T20:02:48.600Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 401,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.59,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 181,
+      "timestamp": "2026-01-20T20:02:48.878Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 475,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 87.82,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 182,
+      "timestamp": "2026-01-20T20:02:49.155Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 388,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 93.39,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 183,
+      "timestamp": "2026-01-20T20:02:49.433Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 428,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.35,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 184,
+      "timestamp": "2026-01-20T20:02:49.711Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 408,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.33,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 185,
+      "timestamp": "2026-01-20T20:02:49.989Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 447,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 90.85,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 186,
+      "timestamp": "2026-01-20T20:02:50.267Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 403,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 86.86,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 187,
+      "timestamp": "2026-01-20T20:02:50.544Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 427,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 84.98,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 188,
+      "timestamp": "2026-01-20T20:02:50.822Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 400,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.41,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 189,
+      "timestamp": "2026-01-20T20:02:51.100Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 451,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 84.32,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 190,
+      "timestamp": "2026-01-20T20:02:51.378Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 414,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 90.8,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 191,
+      "timestamp": "2026-01-20T20:02:51.655Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 432,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.23,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 192,
+      "timestamp": "2026-01-20T20:02:51.933Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 394,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 97.98,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 193,
+      "timestamp": "2026-01-20T20:02:52.211Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 373,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 98.81,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 194,
+      "timestamp": "2026-01-20T20:02:52.489Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 434,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 94.92,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 195,
+      "timestamp": "2026-01-20T20:02:52.767Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 357,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 100.79,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 196,
+      "timestamp": "2026-01-20T20:02:53.044Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 365,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.32,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 197,
+      "timestamp": "2026-01-20T20:02:53.322Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 389,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 101.15,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 198,
+      "timestamp": "2026-01-20T20:02:53.601Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 362,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 96.59,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 199,
+      "timestamp": "2026-01-20T20:02:53.878Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 496,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 82.3,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 200,
+      "timestamp": "2026-01-20T20:02:54.155Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 388,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.1,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 201,
+      "timestamp": "2026-01-20T20:02:54.433Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 444,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 89.37,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 202,
+      "timestamp": "2026-01-20T20:02:54.711Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 458,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 87.83,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 203,
+      "timestamp": "2026-01-20T20:02:54.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 412,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 96.71,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 204,
+      "timestamp": "2026-01-20T20:02:55.267Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 467,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 82.61,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 205,
+      "timestamp": "2026-01-20T20:02:55.544Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 444,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 88.28,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 206,
+      "timestamp": "2026-01-20T20:02:55.821Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 400,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 84.89,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 207,
+      "timestamp": "2026-01-20T20:02:56.100Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 460,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.91,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 208,
+      "timestamp": "2026-01-20T20:02:56.378Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 443,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 91.6,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 209,
+      "timestamp": "2026-01-20T20:02:56.656Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 410,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 93.55,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 210,
+      "timestamp": "2026-01-20T20:02:56.933Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 390,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 98.77,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 211,
+      "timestamp": "2026-01-20T20:02:57.211Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 347,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 103.74,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 212,
+      "timestamp": "2026-01-20T20:02:57.489Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 412,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 91.48,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 213,
+      "timestamp": "2026-01-20T20:02:57.767Z",
+      "huntersCount": 25,
+      "runnersCount": 27,
+      "collisions": 437,
+      "avgHunterKills": 0.12,
+      "avgRunnerHealth": 96.32,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 214,
+      "timestamp": "2026-01-20T20:02:58.044Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 440,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 94.72,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 215,
+      "timestamp": "2026-01-20T20:02:58.322Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 391,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 94.24,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 216,
+      "timestamp": "2026-01-20T20:02:58.600Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 413,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 94.7,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 217,
+      "timestamp": "2026-01-20T20:02:58.879Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 424,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 103.54,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 218,
+      "timestamp": "2026-01-20T20:02:59.155Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 423,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 95.98,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 219,
+      "timestamp": "2026-01-20T20:02:59.433Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 367,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.24,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 220,
+      "timestamp": "2026-01-20T20:02:59.710Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 353,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 97.44,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 221,
+      "timestamp": "2026-01-20T20:02:59.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 355,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 98.64,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 222,
+      "timestamp": "2026-01-20T20:03:00.267Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 366,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 103.73,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 223,
+      "timestamp": "2026-01-20T20:03:00.544Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 356,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 96.15,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 224,
+      "timestamp": "2026-01-20T20:03:00.822Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 377,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 86.54,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 225,
+      "timestamp": "2026-01-20T20:03:01.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 403,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 91.72,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 226,
+      "timestamp": "2026-01-20T20:03:01.378Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 412,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 95.02,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 227,
+      "timestamp": "2026-01-20T20:03:01.656Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 363,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.46,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 228,
+      "timestamp": "2026-01-20T20:03:01.933Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 340,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 102.22,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 229,
+      "timestamp": "2026-01-20T20:03:02.211Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 360,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 99.86,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 230,
+      "timestamp": "2026-01-20T20:03:02.488Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 328,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.18,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 231,
+      "timestamp": "2026-01-20T20:03:02.766Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 273,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 110.15,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 232,
+      "timestamp": "2026-01-20T20:03:03.043Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 359,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.61,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 233,
+      "timestamp": "2026-01-20T20:03:03.322Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 341,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 104.33,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 234,
+      "timestamp": "2026-01-20T20:03:03.599Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 272,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 112.36,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 235,
+      "timestamp": "2026-01-20T20:03:03.877Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 301,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 104.65,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 236,
+      "timestamp": "2026-01-20T20:03:04.155Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 280,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 111.09,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 237,
+      "timestamp": "2026-01-20T20:03:04.433Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 322,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.32,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 238,
+      "timestamp": "2026-01-20T20:03:04.712Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 316,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 104.2,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 239,
+      "timestamp": "2026-01-20T20:03:04.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 280,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 107.9,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 240,
+      "timestamp": "2026-01-20T20:03:05.266Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 291,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 115.29,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 241,
+      "timestamp": "2026-01-20T20:03:05.544Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 377,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 88.92,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 242,
+      "timestamp": "2026-01-20T20:03:05.822Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 352,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 108.69,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 243,
+      "timestamp": "2026-01-20T20:03:06.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 330,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 104.49,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 244,
+      "timestamp": "2026-01-20T20:03:06.377Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 360,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 105.07,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 245,
+      "timestamp": "2026-01-20T20:03:06.655Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 361,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 101.98,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 246,
+      "timestamp": "2026-01-20T20:03:06.933Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 318,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 113.9,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 247,
+      "timestamp": "2026-01-20T20:03:07.210Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 316,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.93,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 248,
+      "timestamp": "2026-01-20T20:03:07.488Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 308,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.28,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 249,
+      "timestamp": "2026-01-20T20:03:07.766Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 324,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 99.57,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 250,
+      "timestamp": "2026-01-20T20:03:08.043Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 348,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 100.76,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 251,
+      "timestamp": "2026-01-20T20:03:08.322Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 274,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 112.31,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 252,
+      "timestamp": "2026-01-20T20:03:08.599Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 335,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.07,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 253,
+      "timestamp": "2026-01-20T20:03:08.877Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 315,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 104.61,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 254,
+      "timestamp": "2026-01-20T20:03:09.155Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 343,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.87,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 255,
+      "timestamp": "2026-01-20T20:03:09.433Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 342,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 104.81,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 256,
+      "timestamp": "2026-01-20T20:03:09.711Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 381,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 97.67,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 257,
+      "timestamp": "2026-01-20T20:03:09.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 374,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.35,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 258,
+      "timestamp": "2026-01-20T20:03:10.267Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 278,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 110.48,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 259,
+      "timestamp": "2026-01-20T20:03:10.544Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 339,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.81,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 260,
+      "timestamp": "2026-01-20T20:03:10.822Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 269,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 114.26,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 261,
+      "timestamp": "2026-01-20T20:03:11.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 339,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 104.61,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 262,
+      "timestamp": "2026-01-20T20:03:11.377Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 285,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 110.03,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 263,
+      "timestamp": "2026-01-20T20:03:11.654Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 458,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 104.11,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 264,
+      "timestamp": "2026-01-20T20:03:11.933Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 335,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 110.76,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 265,
+      "timestamp": "2026-01-20T20:03:12.210Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 313,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 108.62,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 266,
+      "timestamp": "2026-01-20T20:03:12.488Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 357,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 97.17,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 267,
+      "timestamp": "2026-01-20T20:03:12.766Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 370,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 98.99,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 268,
+      "timestamp": "2026-01-20T20:03:13.044Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 390,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 104.79,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 269,
+      "timestamp": "2026-01-20T20:03:13.322Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 433,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 97.63,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 270,
+      "timestamp": "2026-01-20T20:03:13.599Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 380,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 101.19,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 271,
+      "timestamp": "2026-01-20T20:03:13.877Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 411,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 95.84,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 272,
+      "timestamp": "2026-01-20T20:03:14.155Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 343,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.54,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 273,
+      "timestamp": "2026-01-20T20:03:14.432Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 481,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 87.77,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 274,
+      "timestamp": "2026-01-20T20:03:14.710Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 305,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.13,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 275,
+      "timestamp": "2026-01-20T20:03:14.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 340,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 101.26,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 276,
+      "timestamp": "2026-01-20T20:03:15.266Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 321,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 109.35,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 277,
+      "timestamp": "2026-01-20T20:03:15.544Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 405,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 109.4,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 278,
+      "timestamp": "2026-01-20T20:03:15.822Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 443,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 101.8,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 279,
+      "timestamp": "2026-01-20T20:03:16.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 398,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 100.62,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 280,
+      "timestamp": "2026-01-20T20:03:16.377Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 363,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 103.91,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 281,
+      "timestamp": "2026-01-20T20:03:16.655Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 408,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 99.71,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 282,
+      "timestamp": "2026-01-20T20:03:16.933Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 390,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.4,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 283,
+      "timestamp": "2026-01-20T20:03:17.210Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 396,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 108.57,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 284,
+      "timestamp": "2026-01-20T20:03:17.488Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 353,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 111.82,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 285,
+      "timestamp": "2026-01-20T20:03:17.766Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 312,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 113.47,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 286,
+      "timestamp": "2026-01-20T20:03:18.044Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 402,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 114,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 287,
+      "timestamp": "2026-01-20T20:03:18.321Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 383,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 111.84,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 288,
+      "timestamp": "2026-01-20T20:03:18.599Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 285,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 122.78,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 289,
+      "timestamp": "2026-01-20T20:03:18.877Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 362,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 114.84,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 290,
+      "timestamp": "2026-01-20T20:03:19.154Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 338,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 121.46,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 291,
+      "timestamp": "2026-01-20T20:03:19.433Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 370,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 117.63,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 292,
+      "timestamp": "2026-01-20T20:03:19.710Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 328,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 112.63,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 293,
+      "timestamp": "2026-01-20T20:03:19.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 304,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 123.18,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 294,
+      "timestamp": "2026-01-20T20:03:20.266Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 449,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 113.55,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 295,
+      "timestamp": "2026-01-20T20:03:20.544Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 274,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 117.19,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 296,
+      "timestamp": "2026-01-20T20:03:20.821Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 286,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 119.64,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 297,
+      "timestamp": "2026-01-20T20:03:21.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 300,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 119.86,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 298,
+      "timestamp": "2026-01-20T20:03:21.377Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 321,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 119.33,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 299,
+      "timestamp": "2026-01-20T20:03:21.655Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 333,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 114.84,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 300,
+      "timestamp": "2026-01-20T20:03:21.933Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 404,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 103.35,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 301,
+      "timestamp": "2026-01-20T20:03:22.210Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 328,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 117.18,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 302,
+      "timestamp": "2026-01-20T20:03:22.488Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 369,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 109.62,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 303,
+      "timestamp": "2026-01-20T20:03:22.766Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 329,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.35,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 304,
+      "timestamp": "2026-01-20T20:03:23.044Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 388,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 107.71,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 305,
+      "timestamp": "2026-01-20T20:03:23.322Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 355,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 109.78,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 306,
+      "timestamp": "2026-01-20T20:03:23.600Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 367,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 109.71,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 307,
+      "timestamp": "2026-01-20T20:03:23.877Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 366,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 116,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 308,
+      "timestamp": "2026-01-20T20:03:24.155Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 388,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 117.51,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 309,
+      "timestamp": "2026-01-20T20:03:24.432Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 383,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 108.81,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 310,
+      "timestamp": "2026-01-20T20:03:24.710Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 363,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 111.4,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 311,
+      "timestamp": "2026-01-20T20:03:24.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 382,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 109.72,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 312,
+      "timestamp": "2026-01-20T20:03:25.266Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 365,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 107.41,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 313,
+      "timestamp": "2026-01-20T20:03:25.543Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 425,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.35,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 314,
+      "timestamp": "2026-01-20T20:03:25.821Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 341,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 115.77,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 315,
+      "timestamp": "2026-01-20T20:03:26.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 416,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.9,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 316,
+      "timestamp": "2026-01-20T20:03:26.377Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 373,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 105.21,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 317,
+      "timestamp": "2026-01-20T20:03:26.655Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 432,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 95.79,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 318,
+      "timestamp": "2026-01-20T20:03:26.932Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 461,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 96.82,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 319,
+      "timestamp": "2026-01-20T20:03:27.210Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 405,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.51,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 320,
+      "timestamp": "2026-01-20T20:03:27.488Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 435,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.59,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 321,
+      "timestamp": "2026-01-20T20:03:27.765Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 410,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.48,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 322,
+      "timestamp": "2026-01-20T20:03:28.043Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 380,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 110.03,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 323,
+      "timestamp": "2026-01-20T20:03:28.321Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 430,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 108.64,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 324,
+      "timestamp": "2026-01-20T20:03:28.599Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 447,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 111.91,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 325,
+      "timestamp": "2026-01-20T20:03:28.877Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 371,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 115.63,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 326,
+      "timestamp": "2026-01-20T20:03:29.155Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 356,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 115.54,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 327,
+      "timestamp": "2026-01-20T20:03:29.433Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 436,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 101.38,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 328,
+      "timestamp": "2026-01-20T20:03:29.710Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 388,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 112.43,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 329,
+      "timestamp": "2026-01-20T20:03:29.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 390,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 113.29,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 330,
+      "timestamp": "2026-01-20T20:03:30.265Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 378,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 117.71,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 331,
+      "timestamp": "2026-01-20T20:03:30.544Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 346,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 115.48,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 332,
+      "timestamp": "2026-01-20T20:03:30.821Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 445,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 103.23,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 333,
+      "timestamp": "2026-01-20T20:03:31.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 442,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 108.61,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 334,
+      "timestamp": "2026-01-20T20:03:31.377Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 403,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.47,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 335,
+      "timestamp": "2026-01-20T20:03:31.654Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 339,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 112.25,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 336,
+      "timestamp": "2026-01-20T20:03:31.932Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 378,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 103.57,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 337,
+      "timestamp": "2026-01-20T20:03:32.210Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 372,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 110.04,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 338,
+      "timestamp": "2026-01-20T20:03:32.488Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 426,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 108.77,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 339,
+      "timestamp": "2026-01-20T20:03:32.765Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 380,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 109.74,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 340,
+      "timestamp": "2026-01-20T20:03:33.043Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 379,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 114.13,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 341,
+      "timestamp": "2026-01-20T20:03:33.321Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 298,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 121.42,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 342,
+      "timestamp": "2026-01-20T20:03:33.599Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 266,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 122.13,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 343,
+      "timestamp": "2026-01-20T20:03:33.877Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 387,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 116.96,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 344,
+      "timestamp": "2026-01-20T20:03:34.154Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 345,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 119.37,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 345,
+      "timestamp": "2026-01-20T20:03:34.433Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 318,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 121.22,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 346,
+      "timestamp": "2026-01-20T20:03:34.710Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 320,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 125.41,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 347,
+      "timestamp": "2026-01-20T20:03:34.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 321,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 119.2,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 348,
+      "timestamp": "2026-01-20T20:03:35.265Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 374,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 119.76,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 349,
+      "timestamp": "2026-01-20T20:03:35.543Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 294,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 122.33,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 350,
+      "timestamp": "2026-01-20T20:03:35.821Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 328,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 123.25,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 351,
+      "timestamp": "2026-01-20T20:03:36.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 349,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 119.54,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 352,
+      "timestamp": "2026-01-20T20:03:36.377Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 368,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 118.08,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 353,
+      "timestamp": "2026-01-20T20:03:36.654Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 323,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 122.1,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 354,
+      "timestamp": "2026-01-20T20:03:36.932Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 299,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 119.43,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 355,
+      "timestamp": "2026-01-20T20:03:37.210Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 392,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 110.71,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 356,
+      "timestamp": "2026-01-20T20:03:37.487Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 379,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 113.6,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 357,
+      "timestamp": "2026-01-20T20:03:37.766Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 394,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 113.1,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 358,
+      "timestamp": "2026-01-20T20:03:38.044Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 410,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 111.89,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 359,
+      "timestamp": "2026-01-20T20:03:38.321Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 373,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 110.46,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 360,
+      "timestamp": "2026-01-20T20:03:38.599Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 432,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 107.02,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 361,
+      "timestamp": "2026-01-20T20:03:38.876Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 366,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 111.65,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 362,
+      "timestamp": "2026-01-20T20:03:39.154Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 367,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 109.28,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 363,
+      "timestamp": "2026-01-20T20:03:39.432Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 321,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 116.64,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 364,
+      "timestamp": "2026-01-20T20:03:39.710Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 337,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 118.69,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 365,
+      "timestamp": "2026-01-20T20:03:39.988Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 380,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 114.87,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 366,
+      "timestamp": "2026-01-20T20:03:40.265Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 351,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 117.06,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 367,
+      "timestamp": "2026-01-20T20:03:40.543Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 350,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 109.12,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 368,
+      "timestamp": "2026-01-20T20:03:40.821Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 366,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 110.03,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 369,
+      "timestamp": "2026-01-20T20:03:41.098Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 390,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 98.21,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 370,
+      "timestamp": "2026-01-20T20:03:41.376Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 372,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.42,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 371,
+      "timestamp": "2026-01-20T20:03:41.654Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 425,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 100.93,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 372,
+      "timestamp": "2026-01-20T20:03:41.932Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 401,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.16,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 373,
+      "timestamp": "2026-01-20T20:03:42.210Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 454,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 98.2,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 374,
+      "timestamp": "2026-01-20T20:03:42.487Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 450,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 98.92,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 375,
+      "timestamp": "2026-01-20T20:03:42.765Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 419,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 104.47,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 376,
+      "timestamp": "2026-01-20T20:03:43.043Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 408,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 100.97,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 377,
+      "timestamp": "2026-01-20T20:03:43.321Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 400,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.87,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 378,
+      "timestamp": "2026-01-20T20:03:43.598Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 398,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 107.4,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 379,
+      "timestamp": "2026-01-20T20:03:43.877Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 382,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 108.26,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 380,
+      "timestamp": "2026-01-20T20:03:44.155Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 378,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 103.66,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 381,
+      "timestamp": "2026-01-20T20:03:44.432Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 381,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 100.34,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 382,
+      "timestamp": "2026-01-20T20:03:44.710Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 358,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 107.2,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 383,
+      "timestamp": "2026-01-20T20:03:44.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 391,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 104.42,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 384,
+      "timestamp": "2026-01-20T20:03:45.265Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 386,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 96.53,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 385,
+      "timestamp": "2026-01-20T20:03:45.543Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 436,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 94.81,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 386,
+      "timestamp": "2026-01-20T20:03:45.821Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 314,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.8,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 387,
+      "timestamp": "2026-01-20T20:03:46.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 343,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.2,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 388,
+      "timestamp": "2026-01-20T20:03:46.376Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 367,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 94.93,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 389,
+      "timestamp": "2026-01-20T20:03:46.655Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 370,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 101.51,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 390,
+      "timestamp": "2026-01-20T20:03:46.932Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 419,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.81,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 391,
+      "timestamp": "2026-01-20T20:03:47.210Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 438,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 97.22,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 392,
+      "timestamp": "2026-01-20T20:03:47.487Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 356,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 104.81,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 393,
+      "timestamp": "2026-01-20T20:03:47.765Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 440,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 95.06,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 394,
+      "timestamp": "2026-01-20T20:03:48.043Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 387,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 102.78,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 395,
+      "timestamp": "2026-01-20T20:03:48.321Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 414,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 100.82,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 396,
+      "timestamp": "2026-01-20T20:03:48.598Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 406,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 99.62,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 397,
+      "timestamp": "2026-01-20T20:03:48.877Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 417,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 98.07,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 398,
+      "timestamp": "2026-01-20T20:03:49.154Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 390,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 91.28,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 399,
+      "timestamp": "2026-01-20T20:03:49.432Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 386,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 98.58,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 400,
+      "timestamp": "2026-01-20T20:03:49.710Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 347,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 107.04,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 401,
+      "timestamp": "2026-01-20T20:03:49.987Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 388,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 99.07,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 402,
+      "timestamp": "2026-01-20T20:03:50.265Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 376,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.13,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 403,
+      "timestamp": "2026-01-20T20:03:50.543Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 445,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 97.72,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 404,
+      "timestamp": "2026-01-20T20:03:50.820Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 426,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 90.92,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 405,
+      "timestamp": "2026-01-20T20:03:51.098Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 410,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 88.66,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 406,
+      "timestamp": "2026-01-20T20:03:51.376Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 381,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 94,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 407,
+      "timestamp": "2026-01-20T20:03:51.654Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 421,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 89.1,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 408,
+      "timestamp": "2026-01-20T20:03:51.932Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 451,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 90.97,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 409,
+      "timestamp": "2026-01-20T20:03:52.209Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 413,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 98.2,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 410,
+      "timestamp": "2026-01-20T20:03:52.487Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 430,
+      "avgHunterKills": 0.08,
+      "avgRunnerHealth": 102.51,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 411,
+      "timestamp": "2026-01-20T20:03:52.765Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 426,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 96.9,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 412,
+      "timestamp": "2026-01-20T20:03:53.043Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 406,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 95.85,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 413,
+      "timestamp": "2026-01-20T20:03:53.320Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 413,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.11,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 414,
+      "timestamp": "2026-01-20T20:03:53.598Z",
+      "huntersCount": 25,
+      "runnersCount": 28,
+      "collisions": 468,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 82.99,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 415,
+      "timestamp": "2026-01-20T20:03:53.876Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 468,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 81.02,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 416,
+      "timestamp": "2026-01-20T20:03:54.154Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 529,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 79.4,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 417,
+      "timestamp": "2026-01-20T20:03:54.432Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 449,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 88.21,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 418,
+      "timestamp": "2026-01-20T20:03:54.710Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 495,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 81.5,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 419,
+      "timestamp": "2026-01-20T20:03:54.987Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 495,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 83.5,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 420,
+      "timestamp": "2026-01-20T20:03:55.265Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 464,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 80.4,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 421,
+      "timestamp": "2026-01-20T20:03:55.543Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 431,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 97.59,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 422,
+      "timestamp": "2026-01-20T20:03:55.820Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 448,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 89.03,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 423,
+      "timestamp": "2026-01-20T20:03:56.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 462,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 88.07,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 424,
+      "timestamp": "2026-01-20T20:03:56.376Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 386,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 87.52,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 425,
+      "timestamp": "2026-01-20T20:03:56.653Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 387,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.77,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 426,
+      "timestamp": "2026-01-20T20:03:56.931Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 425,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 82.26,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 427,
+      "timestamp": "2026-01-20T20:03:57.209Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 361,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.49,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 428,
+      "timestamp": "2026-01-20T20:03:57.487Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 403,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 86.31,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 429,
+      "timestamp": "2026-01-20T20:03:57.765Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 390,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.09,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 430,
+      "timestamp": "2026-01-20T20:03:58.043Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 372,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 97.71,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 431,
+      "timestamp": "2026-01-20T20:03:58.320Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 420,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.88,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 432,
+      "timestamp": "2026-01-20T20:03:58.599Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 417,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 88.73,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 433,
+      "timestamp": "2026-01-20T20:03:58.876Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 414,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 84.1,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 434,
+      "timestamp": "2026-01-20T20:03:59.154Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 458,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 84.44,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 435,
+      "timestamp": "2026-01-20T20:03:59.431Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 524,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 75.94,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 436,
+      "timestamp": "2026-01-20T20:03:59.709Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 482,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 84.21,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 437,
+      "timestamp": "2026-01-20T20:03:59.988Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 411,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 93.34,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 438,
+      "timestamp": "2026-01-20T20:04:00.264Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 357,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 95.14,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 439,
+      "timestamp": "2026-01-20T20:04:00.543Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 472,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 81.46,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 440,
+      "timestamp": "2026-01-20T20:04:00.820Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 460,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 84.1,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 441,
+      "timestamp": "2026-01-20T20:04:01.098Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 488,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 89.18,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 442,
+      "timestamp": "2026-01-20T20:04:01.376Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 436,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 88.94,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 443,
+      "timestamp": "2026-01-20T20:04:01.653Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 422,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 94.84,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 444,
+      "timestamp": "2026-01-20T20:04:01.931Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 472,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 96.43,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 445,
+      "timestamp": "2026-01-20T20:04:02.209Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 422,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 97.04,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 446,
+      "timestamp": "2026-01-20T20:04:02.487Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 375,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.83,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 447,
+      "timestamp": "2026-01-20T20:04:02.765Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 428,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 95.14,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 448,
+      "timestamp": "2026-01-20T20:04:03.042Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 423,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 98.05,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 449,
+      "timestamp": "2026-01-20T20:04:03.320Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 394,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 92.13,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 450,
+      "timestamp": "2026-01-20T20:04:03.598Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 369,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 101.49,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 451,
+      "timestamp": "2026-01-20T20:04:03.876Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 470,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 81.64,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 452,
+      "timestamp": "2026-01-20T20:04:04.154Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 458,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 87.93,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 453,
+      "timestamp": "2026-01-20T20:04:04.432Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 494,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 95.42,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 454,
+      "timestamp": "2026-01-20T20:04:04.709Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 414,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 97.66,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 455,
+      "timestamp": "2026-01-20T20:04:04.987Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 475,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 95.11,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 456,
+      "timestamp": "2026-01-20T20:04:05.265Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 404,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 101.73,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 457,
+      "timestamp": "2026-01-20T20:04:05.542Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 448,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 98.89,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 458,
+      "timestamp": "2026-01-20T20:04:05.820Z",
+      "huntersCount": 25,
+      "runnersCount": 29,
+      "collisions": 522,
+      "avgHunterKills": 0.04,
+      "avgRunnerHealth": 93.15,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 459,
+      "timestamp": "2026-01-20T20:04:06.099Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 390,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.28,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 460,
+      "timestamp": "2026-01-20T20:04:06.376Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 418,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 107.06,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 461,
+      "timestamp": "2026-01-20T20:04:06.653Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 446,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 101.32,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 462,
+      "timestamp": "2026-01-20T20:04:06.932Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 373,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.57,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 463,
+      "timestamp": "2026-01-20T20:04:07.209Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 390,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 101.59,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 464,
+      "timestamp": "2026-01-20T20:04:07.487Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 400,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 112.21,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 465,
+      "timestamp": "2026-01-20T20:04:07.765Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 413,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 108.36,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 466,
+      "timestamp": "2026-01-20T20:04:08.043Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 429,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 105.54,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 467,
+      "timestamp": "2026-01-20T20:04:08.320Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 435,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 107.83,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 468,
+      "timestamp": "2026-01-20T20:04:08.598Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 423,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 108.65,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 469,
+      "timestamp": "2026-01-20T20:04:08.876Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 392,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 107.67,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 470,
+      "timestamp": "2026-01-20T20:04:09.154Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 439,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 103.9,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 471,
+      "timestamp": "2026-01-20T20:04:09.432Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 442,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 101.04,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 472,
+      "timestamp": "2026-01-20T20:04:09.709Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 420,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 108.81,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 473,
+      "timestamp": "2026-01-20T20:04:09.987Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 405,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 117,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 474,
+      "timestamp": "2026-01-20T20:04:10.265Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 380,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.06,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 475,
+      "timestamp": "2026-01-20T20:04:10.542Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 452,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 106.12,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 476,
+      "timestamp": "2026-01-20T20:04:10.821Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 439,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 103.28,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 477,
+      "timestamp": "2026-01-20T20:04:11.098Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 360,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 112.98,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 478,
+      "timestamp": "2026-01-20T20:04:11.376Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 367,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 114.56,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 479,
+      "timestamp": "2026-01-20T20:04:11.653Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 384,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 102.43,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 480,
+      "timestamp": "2026-01-20T20:04:11.931Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 426,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 99.83,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 481,
+      "timestamp": "2026-01-20T20:04:12.208Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 407,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 109.05,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 482,
+      "timestamp": "2026-01-20T20:04:12.487Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 364,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 114.47,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 483,
+      "timestamp": "2026-01-20T20:04:12.764Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 393,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 115.25,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 484,
+      "timestamp": "2026-01-20T20:04:13.043Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 391,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 117.15,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 485,
+      "timestamp": "2026-01-20T20:04:13.320Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 338,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 121.51,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 486,
+      "timestamp": "2026-01-20T20:04:13.598Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 335,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 121.73,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 487,
+      "timestamp": "2026-01-20T20:04:13.876Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 383,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 116.93,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 488,
+      "timestamp": "2026-01-20T20:04:14.154Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 341,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 120.43,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 489,
+      "timestamp": "2026-01-20T20:04:14.432Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 367,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 115.48,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 490,
+      "timestamp": "2026-01-20T20:04:14.709Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 334,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 114.72,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 491,
+      "timestamp": "2026-01-20T20:04:14.987Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 323,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 119,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 492,
+      "timestamp": "2026-01-20T20:04:15.265Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 316,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 120.89,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 493,
+      "timestamp": "2026-01-20T20:04:15.542Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 318,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 124.1,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 494,
+      "timestamp": "2026-01-20T20:04:15.821Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 326,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 125.75,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 495,
+      "timestamp": "2026-01-20T20:04:16.098Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 283,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 127.33,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 496,
+      "timestamp": "2026-01-20T20:04:16.376Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 303,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 129.75,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 497,
+      "timestamp": "2026-01-20T20:04:16.653Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 294,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 121.95,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 498,
+      "timestamp": "2026-01-20T20:04:16.931Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 269,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 121.45,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 499,
+      "timestamp": "2026-01-20T20:04:17.209Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 339,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 121.45,
+      "timeAcceleration": 50
+    },
+    {
+      "generation": 500,
+      "timestamp": "2026-01-20T20:04:17.486Z",
+      "huntersCount": 25,
+      "runnersCount": 30,
+      "collisions": 304,
+      "avgHunterKills": 0,
+      "avgRunnerHealth": 125.98,
+      "timeAcceleration": 50
+    }
+  ]
+}

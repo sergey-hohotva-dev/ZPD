@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Canvas Q-Learning — Full History Export</title>
+<style>
+  body { margin:0; overflow:hidden; background:#1a1a1a; font-family:sans-serif; color:#fff; display:flex; flex-direction:column; align-items:center; }
+  canvas#game { background:#222; display:block; margin-top:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+  #ui { font-size:16px; margin-top:5px; color:#fff; font-weight: bold; }
+  #leaderBonuses { font-size:14px; color:white; background: rgba(0,0,0,0.7); padding:8px; border-radius:5px; max-width:400px; margin-top:5px; min-height: 40px; box-sizing: border-box; }
+  .bonus-item { margin:2px 0; padding:2px 5px; background: rgba(255,255,255,0.1); border-radius:3px; }
+  .no-bonus { color:#888; font-style:italic; }
+  #graphs { display:flex; flex-wrap:wrap; justify-content:center; margin-top:10px; width: 100%; max-width: 1200px; }
+  .chart-container { background: rgba(0,0,0,0.7); margin:5px; padding:5px; border-radius:5px; box-sizing: border-box; }
+  canvas.chart { background:#333; }
+  #controls { margin-top:10px; color:white; background: rgba(50,50,50,0.8); padding: 10px; border-radius: 8px; display:flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center;}
+  button { padding: 5px 10px; cursor: pointer; background: #444; color: white; border: 1px solid #666; border-radius: 4px; }
+  button:hover { background: #555; }
+  button#exportBtn { background: #28a745; border-color: #1e7e34; }
+  button#exportBtn:hover { background: #218838; }
+  label { display: flex; align-items: center; gap: 5px; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<canvas id="game" width="800" height="800"></canvas>
+<div id="ui">Поколение: 0. Агентов в живых: 0.</div>
+<div id="leaderBonuses">
+  <div style="margin-bottom:5px;font-weight:bold;">Активные бонусы лидера:</div>
+  <div id="bonusList" class="no-bonus">Нет активных бонусов</div>
+</div>
+<div id="controls">
+  <label>Скорость: <input type="range" id="speedSlider" min="1" max="200" value="10"></label>
+  <label><input type="checkbox" id="turboMode"> Turbo</label>
+  <button id="pauseBtn">Пауза</button>
+  <button id="stepBtn">Шаг</button>
+  <button id="resetChartsBtn">Сброс (Очистка истории)</button>
+  <button id="exportBtn">Скачать CSV (Вся история)</button>
+</div>
+<div id="graphs"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// --- DOM refs ---
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
+const agentCountUI = document.getElementById('ui');
+
+// --- Q-learning params ---
+const LEARNING_RATE = 0.1;
+const DISCOUNT_FACTOR = 0.9;
+let EXPLORATION_RATE = 1.0;
+const EXPLORATION_DECAY = 0.9995;
+
+// --- Survival & Physics Tweaks ---
+const HUNGER_DECAY = 0.015; 
+const SLEEP_DECAY_MOVE = 0.05; 
+const SLEEP_GAIN_STAY = 0.2;
+const FOOD_HEALING = 70; 
+const HEALTH_PENALTY = 0.005; 
+const MAX_APPLE_RADIUS = 15;
+
+// --- World & simulation state ---
+let agents = [];
+let apples = [];
+let lastAppleTime = 0;
+const appleSpawnInterval = 1000;
+let generationTimer = 0;
+let generationStartTime = 0;
+const GENERATION_INTERVAL_MS = 30000; 
+let generationNumber = 1;
+let currentGenerationSurvivors = 4;
+let simulationPaused = false;
+
+// --- Leader modifiers ---
+let appleSpawnCountModifier = 0.0;
+let newAgentChildModifier = 1.0;
+let leaderOnlyApples = false;
+let votersToBlock = new Set();
+
+// --- Performance ---
+let timeScale = 10; 
+let frameCount = 0;
+
+// --- Charts & Data Storage ---
+const graphCharts = {};
+// ПОЛНЫЙ ЛОГ ВСЕГО ОБУЧЕНИЯ (накапливается, пока не нажать Сброс)
+let simulationLog = []; 
+
+// ----------------- Genetics & evolution -----------------
+function getRandomGene() { return Math.random() * 100; }
+function applyGeneticMutation(value) {
+  const mutationFactor = (Math.random() - 0.5) * 0.2;
+  let newValue = value * (1 + mutationFactor);
+  return Math.max(0, Math.min(100, newValue));
+}
+
+function resetGenerationEffects() {
+  appleSpawnCountModifier = 0.0;
+  newAgentChildModifier = 1.0;
+  leaderOnlyApples = false;
+  votersToBlock.clear();
+}
+
+function applyLeaderEffects(winner, survivors) {
+  if (!winner) return;
+  const genes = winner.genes;
+  const totalGeneScore = genes.generosity + genes.aggression + genes.gluttony + genes.dictatorship + genes.selfSacrifice + genes.socialPolicy;
+  if (totalGeneScore === 0) return;
+  const r = Math.random() * totalGeneScore;
+  let cumulative = 0;
+
+  cumulative += genes.generosity;
+  if (r < cumulative) {
+    winner.health = Math.max(0, winner.health / 2);
+    appleSpawnCountModifier += 0.20;
+    return;
+  }
+
+  cumulative += genes.aggression;
+  if (r < cumulative) {
+    const nonVoters = survivors.filter(a => a.votedFor !== winner.id && a.id !== winner.id);
+    const killCount = Math.min(nonVoters.length, Math.floor(survivors.length * 0.1));
+    for (let i = 0; i < killCount; i++) {
+      nonVoters[i].alive = false;
+      nonVoters[i].health = 0;
+      appleSpawnCountModifier += 0.05;
+    }
+    return;
+  }
+
+  cumulative += genes.gluttony;
+  if (r < cumulative) {
+    leaderOnlyApples = true;
+    return;
+  }
+
+  cumulative += genes.dictatorship;
+  if (r < cumulative) {
+    survivors.forEach(agent => {
+      if (agent.votedFor !== winner.id && agent.id !== winner.id) {
+        votersToBlock.add(agent.id);
+        agent.colorOverride = 'rgb(255,255,0)';
+      }
+    });
+    return;
+  }
+
+  cumulative += genes.selfSacrifice;
+  if (r < cumulative) {
+    winner.alive = false;
+    winner.health = 0;
+    appleSpawnCountModifier += 1.0;
+    return;
+  }
+
+  cumulative += genes.socialPolicy;
+  if (r < cumulative) {
+    newAgentChildModifier += 0.5;
+    return;
+  }
+}
+
+function runElectionAndEvolve(survivors) {
+  if (survivors.length < 2) return survivors[0] || null;
+  survivors.forEach(agent => { agent.isWinner = false; agent.votes = 0; agent.votedFor = null; agent.colorOverride = null; });
+  survivors.forEach(agent => { agent.votedFor = agent.vote(survivors); });
+  let electionWinner = survivors[0];
+  survivors.forEach(agent => { if (agent.votes > electionWinner.votes) electionWinner = agent; });
+  const maxVotes = electionWinner.votes;
+  const topCandidates = survivors.filter(a => a.votes === maxVotes);
+  if (topCandidates.length > 1) {
+    topCandidates.sort((a,b) => b.health - a.health);
+    electionWinner = topCandidates[0];
+  }
+  electionWinner.isWinner = true;
+  return electionWinner;
+}
+
+function startNewGeneration() {
+  const initialSurvivors = agents.length;
+  currentGenerationSurvivors = initialSurvivors;
+  generationNumber++;
+  resetGenerationEffects();
+
+  if (initialSurvivors < 2) {
+    agents = [];
+    for (let i = 0; i < 4; i++) agents.push(new Agent(Math.random() * (canvas.width - 40), Math.random() * (canvas.height - 40), {}));
+    generationTimer = 0; 
+    generationStartTime = Date.now();
+    EXPLORATION_RATE = 1.0; 
+    updateLeaderBonusesUI();
+    return;
+  }
+
+  const winner = runElectionAndEvolve(agents);
+
+  const inheritedParams = winner ? {
+    qTable: winner.qTable,
+    generosity: winner.genes.generosity,
+    aggression: winner.genes.aggression,
+    gluttony: winner.genes.gluttony,
+    dictatorship: winner.genes.dictatorship,
+    selfSacrifice: winner.genes.selfSacrifice,
+    socialPolicy: winner.genes.socialPolicy,
+    votes: winner.votes,
+    isWinner: true
+  } : {};
+
+  if (winner) applyLeaderEffects(winner, agents);
+
+  agents = agents.filter(a => a.alive);
+
+  const baseChildren = Math.floor(initialSurvivors * 0.6);
+  const newAgentCount = initialSurvivors + Math.floor(baseChildren * newAgentChildModifier);
+
+  const newAgents = [];
+  for (let i = 0; i < newAgentCount; i++) {
+    const x = Math.random() * (canvas.width - 40);
+    const y = Math.random() * (canvas.height - 40);
+    const newParams = {
+      qTable: inheritedParams.qTable,
+      generosity: inheritedParams.generosity,
+      aggression: inheritedParams.aggression,
+      gluttony: inheritedParams.gluttony,
+      dictatorship: inheritedParams.dictatorship,
+      selfSacrifice: inheritedParams.selfSacrifice,
+      socialPolicy: inheritedParams.socialPolicy
+    };
+    if (i === 0 && winner) { newParams.votes = inheritedParams.votes; newParams.isWinner = true; }
+    newAgents.push(new Agent(x, y, newParams));
+  }
+  agents = newAgents;
+  EXPLORATION_RATE = 1.0;
+  generationTimer = Date.now();
+  generationStartTime = Date.now();
+  updateLeaderBonusesUI();
+}
+
+// ----------------- Agent & Q-learning -----------------
+function Agent(x, y, inheritedParams = {}) {
+  this.id = Math.random().toString(36).substring(2, 9);
+  this.x = x; this.y = y; this.size = 40; this.speed = 5;
+  this.alive = true; this.health = 100; this.hunger = 100; this.sleep = 100;
+  this.votes = inheritedParams.votes || 0; this.isWinner = inheritedParams.isWinner || false;
+  this.votedFor = null; this.colorOverride = null;
+  this.genes = {
+    generosity: inheritedParams.generosity ? applyGeneticMutation(inheritedParams.generosity) : getRandomGene(),
+    aggression: inheritedParams.aggression ? applyGeneticMutation(inheritedParams.aggression) : getRandomGene(),
+    gluttony: inheritedParams.gluttony ? applyGeneticMutation(inheritedParams.gluttony) : getRandomGene(),
+    dictatorship: inheritedParams.dictatorship ? applyGeneticMutation(inheritedParams.dictatorship) : getRandomGene(),
+    selfSacrifice: inheritedParams.selfSacrifice ? applyGeneticMutation(inheritedParams.selfSacrifice) : getRandomGene(),
+    socialPolicy: inheritedParams.socialPolicy ? applyGeneticMutation(inheritedParams.socialPolicy) : getRandomGene()
+  };
+  this.qTable = inheritedParams.qTable ? JSON.parse(JSON.stringify(inheritedParams.qTable)) : {};
+  this.actions = ['up', 'down', 'left', 'right', 'stay'];
+  this.visionRadius = 50;
+}
+
+Agent.prototype.vote = function(allAgents) {
+  if (votersToBlock.has(this.id)) { this.votes = 0; return null; }
+  if (allAgents.length <= 1) return null;
+  let bestCandidate = null; let maxScore = -Infinity;
+  for (const otherAgent of allAgents) {
+    if (otherAgent.id === this.id) continue;
+    const successScore = otherAgent.health + (100 - otherAgent.genes.gluttony);
+    let voteScore = (this.genes.dictatorship / 100) * otherAgent.genes.dictatorship + (1 - this.genes.dictatorship / 100) * successScore;
+    if (voteScore > maxScore) { maxScore = voteScore; bestCandidate = otherAgent; }
+  }
+  if (bestCandidate) { bestCandidate.votes++; return bestCandidate.id; }
+  return null;
+};
+
+Agent.prototype.getState = function(apples) {
+  let nearestApple = null; let minDistance = Infinity;
+  for (const apple of apples) {
+    const dx = apple.x - (this.x + this.size / 2);
+    const dy = apple.y - (this.y + this.size / 2);
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    if (distance < minDistance) { minDistance = distance; nearestApple = apple; }
+  }
+  let appleCountState;
+  const count = apples.length;
+  if (count > 20) appleCountState = 'many';
+  else if (count > 5) appleCountState = 'medium';
+  else appleCountState = 'few';
+  let localState = 'idle';
+  if (nearestApple && minDistance < this.visionRadius + this.size / 2) {
+    const dx = nearestApple.x - this.x; const dy = nearestApple.y - this.y;
+    const dirX = Math.abs(dx) < this.size / 2 ? 'center' : (dx > 0 ? 'right' : 'left');
+    const dirY = Math.abs(dy) < this.size / 2 ? 'center' : (dy > 0 ? 'down' : 'up');
+    localState = 'apple_' + dirY + '_' + dirX;
+  }
+  return localState + '_' + appleCountState;
+};
+
+Agent.prototype.chooseAction = function(state) {
+  if (!this.qTable[state]) this.qTable[state] = Array(this.actions.length).fill(0);
+  if (Math.random() < EXPLORATION_RATE) return this.actions[Math.floor(Math.random() * this.actions.length)];
+  const maxQ = Math.max(...this.qTable[state]);
+  const actionIndex = this.qTable[state].indexOf(maxQ);
+  return this.actions[actionIndex];
+};
+
+Agent.prototype.updateQValue = function(state, action, reward, nextState) {
+  if (!this.qTable[state]) this.qTable[state] = Array(this.actions.length).fill(0);
+  const oldQ = this.qTable[state][this.actions.indexOf(action)];
+  if (!this.qTable[nextState]) this.qTable[nextState] = Array(this.actions.length).fill(0);
+  const futureQ = Math.max(...this.qTable[nextState]);
+  const newQ = oldQ + LEARNING_RATE * (reward + DISCOUNT_FACTOR * futureQ - oldQ);
+  this.qTable[state][this.actions.indexOf(action)] = newQ;
+};
+
+// ----------------- Graphs & Logging -----------------
+function createGraphs() {
+  const graphsDiv = document.getElementById('graphs');
+  const metrics = ['aliveAgents', 'avgHealth', 'avgHunger', 'appleCount', 'avgMaxQ', 'leaderGenes'];
+  metrics.forEach(m => {
+    const container = document.createElement('div'); 
+    container.className = 'chart-container'; 
+    container.style.width = '400px'; 
+    container.style.height = '200px';
+    const c = document.createElement('canvas'); 
+    c.className = 'chart'; 
+    container.appendChild(c); 
+    graphsDiv.appendChild(container);
+    graphCharts[m] = new Chart(c.getContext('2d'), { 
+      type: 'line', 
+      data: { 
+        labels: [], 
+        datasets: [{ 
+          label: m, 
+          data: [], 
+          borderColor: 'cyan', 
+          backgroundColor: 'rgba(0,255,255,0.12)',
+          pointRadius: 0,
+          borderWidth: 1
+        }] 
+      }, 
+      options: { 
+        animation: false, 
+        responsive: true, 
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: { 
+          x: { display: false }, 
+          y: { display: true, grid: { color: '#444' } } 
+        } 
+      } 
+    });
+  });
+}
+
+function recordMetrics() {
+  const alive = agents.filter(a => a.alive).length;
+  const avgHealth = agents.length ? agents.reduce((s, a) => s + a.health, 0) / agents.length : 0;
+  const avgHunger = agents.length ? agents.reduce((s, a) => s + a.hunger, 0) / agents.length : 0;
+  const appleCount = apples.length;
+  let totalMaxQ = 0;
+  for (const a of agents) {
+    let agentMax = 0;
+    for (const s in a.qTable) { 
+      const arr = a.qTable[s]; 
+      if (Array.isArray(arr)) { 
+        const m = Math.max(...arr); 
+        if (m > agentMax) agentMax = m; 
+      } 
+    }
+    totalMaxQ += agentMax;
+  }
+  const avgMaxQ = agents.length ? totalMaxQ / agents.length : 0;
+  const leader = agents.find(a => a.isWinner);
+  const leaderGenesVal = leader ? (leader.genes.generosity + leader.genes.aggression + leader.genes.gluttony + leader.genes.dictatorship + leader.genes.selfSacrifice + leader.genes.socialPolicy) / 6 : 0;
+
+  const timeInSec = ((Date.now() - generationStartTime) / 1000).toFixed(2);
+
+  // Добавляем запись в ПОЛНЫЙ ЛОГ
+  simulationLog.push({
+    generation: generationNumber,
+    timeInGeneration: timeInSec,
+    aliveAgents: alive,
+    avgHealth: avgHealth.toFixed(2),
+    avgHunger: avgHunger.toFixed(2),
+    appleCount: appleCount,
+    avgMaxQ: avgMaxQ.toFixed(2),
+    leaderGenes: leaderGenesVal.toFixed(2)
+  });
+
+  // Обновляем визуальные графики (с ограничением памяти)
+  const timestamp = `G${generationNumber}:${timeInSec}`;
+  const map = { aliveAgents: alive, avgHealth: avgHealth, avgHunger: avgHunger, appleCount: appleCount, avgMaxQ: avgMaxQ, leaderGenes: leaderGenesVal };
+  Object.keys(map).forEach(k => {
+    const ch = graphCharts[k]; 
+    if (!ch) return; 
+    ch.data.labels.push(timestamp); 
+    ch.data.datasets[0].data.push(map[k]); 
+    if (ch.data.labels.length > 500) { 
+      ch.data.labels.shift(); 
+      ch.data.datasets[0].data.shift(); 
+    } 
+    ch.update('none');
+  });
+}
+
+function updateLeaderBonusesUI() {
+  const bonusList = document.getElementById('bonusList'); 
+  const bonuses = [];
+  if (appleSpawnCountModifier > 0) bonuses.push('+' + Math.round(appleSpawnCountModifier * 100) + '% яблок');
+  if (newAgentChildModifier > 1) bonuses.push('+' + Math.round((newAgentChildModifier - 1) * 100) + '% детей');
+  if (leaderOnlyApples) bonuses.push('Желтые яблоки (только для лидера)');
+  if (votersToBlock.size > 0) bonuses.push('Заблокировано агентов: ' + votersToBlock.size);
+  
+  if (bonuses.length > 0) { 
+    bonusList.innerHTML = bonuses.map(b => '<div class="bonus-item">' + b + '</div>').join(''); 
+    bonusList.classList.remove('no-bonus'); 
+  }
+  else { 
+    bonusList.innerHTML = 'Нет активных бонусов'; 
+    bonusList.classList.add('no-bonus'); 
+  }
+}
+
+function initAgents() { 
+  agents = []; 
+  apples = []; 
+  lastAppleTime = Date.now(); 
+  generationStartTime = Date.now();
+  simulationLog = []; // Очистка истории при полном рестарте
+  for (let i = 0; i < 4; i++) {
+    agents.push(new Agent(Math.random() * (canvas.width - 40), Math.random() * (canvas.height - 40), {}));
+  }
+  updateLeaderBonusesUI(); 
+}
+
+// ----------------- Core update/draw/loop -----------------
+
+function update() {
+  if (simulationPaused) return;
+  const now = Date.now(); 
+  if (generationTimer === 0) {
+    generationTimer = now;
+    generationStartTime = now;
+  }
+
+  for (let t = 0; t < timeScale; t++) {
+    if (now - generationTimer > GENERATION_INTERVAL_MS || agents.length === 0) {
+      if (agents.length > 0) { 
+        simulationPaused = true; 
+        setTimeout(() => { 
+          startNewGeneration(); 
+          simulationPaused = false; 
+        }, 2000); 
+        return; 
+      }
+      else { 
+        startNewGeneration(); 
+        if (agents.length === 0) return; 
+      }
+    }
+
+    agents.forEach(agent => {
+      if (!agent.alive) return;
+      let reward = -0.1; 
+      let isMoving = false;
+      
+      agent.hunger -= HUNGER_DECAY;
+      
+      const currentState = agent.getState(apples);
+      const action = agent.chooseAction(currentState);
+      switch (action) { 
+        case 'up': agent.y -= agent.speed; isMoving = true; break; 
+        case 'down': agent.y += agent.speed; isMoving = true; break; 
+        case 'left': agent.x -= agent.speed; isMoving = true; break; 
+        case 'right': agent.x += agent.speed; isMoving = true; break; 
+        case 'stay': break; 
+      }
+      agent.x = Math.max(0, Math.min(canvas.width - agent.size, agent.x)); 
+      agent.y = Math.max(0, Math.min(canvas.height - agent.size, agent.y));
+
+      apples = apples.filter(apple => {
+        const dx = (agent.x + agent.size / 2) - (apple.x + MAX_APPLE_RADIUS);
+        const dy = (agent.y + agent.size / 2) - (apple.y + MAX_APPLE_RADIUS);
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < MAX_APPLE_RADIUS + agent.size / 2) {
+          if (leaderOnlyApples && apple.isLeaderOnly && !agent.isWinner) return true; 
+          agent.hunger = Math.min(100, agent.hunger + FOOD_HEALING);
+          reward += 50;
+          return false; 
+        }
+        return true;
+      });
+
+      if (isMoving) agent.sleep -= SLEEP_DECAY_MOVE; else agent.sleep += SLEEP_GAIN_STAY;
+      agent.sleep = Math.max(0, Math.min(100, agent.sleep));
+      
+      if (agent.hunger <= 0 || agent.sleep <= 0) { 
+        agent.health -= HEALTH_PENALTY; 
+        reward -= 1; 
+      }
+      
+      if (agent.health <= 0) { 
+        agent.alive = false; 
+        reward = -100; 
+      }
+      
+      const nextState = agent.getState(apples);
+      agent.updateQValue(currentState, action, reward, nextState);
+    });
+
+    agents = agents.filter(a => a.alive);
+
+    if (Date.now() - lastAppleTime > appleSpawnInterval) {
+      const baseCount = Math.floor(Math.random() * 4) + 3;
+      const count = Math.floor(baseCount * (1.0 + appleSpawnCountModifier));
+      for (let i = 0; i < count; i++) {
+        const x = Math.random() * (canvas.width - 30);
+        const y = Math.random() * (canvas.height - 30);
+        const isLeaderOnly = leaderOnlyApples && (apples.length + i) % 4 === 0;
+        apples.push({ x, y, r: MAX_APPLE_RADIUS, isLeaderOnly });
+      }
+      lastAppleTime = Date.now();
+    }
+
+    EXPLORATION_RATE *= EXPLORATION_DECAY; 
+    EXPLORATION_RATE = Math.max(0.01, EXPLORATION_RATE);
+  }
+
+  agentCountUI.innerText = `Поколение: ${generationNumber}. Агентов в живых: ${agents.length} (Выжило: ${currentGenerationSurvivors}).`;
+  if (frameCount % 5 === 0) recordMetrics();
+  frameCount++;
+}
+
+function draw() {
+  const turbo = document.getElementById('turboMode').checked;
+  if (turbo && frameCount % 30 !== 0) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  apples.forEach(apple => { 
+    ctx.fillStyle = apple.isLeaderOnly ? 'rgb(255,255,0)' : 'rgb(255,68,68)'; 
+    ctx.beginPath(); 
+    ctx.arc(apple.x + apple.r, apple.y + apple.r, apple.r, 0, Math.PI * 2); 
+    ctx.fill(); 
+  });
+  
+  agents.forEach(agent => {
+    ctx.fillStyle = agent.colorOverride ? agent.colorOverride : (agent.isWinner ? 'rgb(255,105,180)' : 'rgb(0,255,255)');
+    ctx.fillRect(agent.x, agent.y, agent.size, agent.size);
+    
+    ctx.fillStyle = 'red';
+    ctx.fillRect(agent.x, agent.y - 5, agent.size, 4);
+    ctx.fillStyle = '#0f0';
+    ctx.fillRect(agent.x, agent.y - 5, agent.size * (agent.health/100), 4);
+    
+    if (agent.isWinner) { 
+      ctx.fillStyle = 'white'; 
+      ctx.font = '10px sans-serif'; 
+      ctx.textAlign = 'center'; 
+      ctx.fillText('Победитель (' + agent.votes + ' г.)', agent.x + agent.size / 2, agent.y - 8); 
+    }
+    ctx.fillStyle = 'white'; 
+    ctx.font = '10px sans-serif'; 
+    ctx.textAlign = 'right'; 
+    ctx.fillText('Г: ' + agent.votes, agent.x + agent.size - 2, agent.y + agent.size - 2);
+  });
+}
+
+function loop() { 
+  update(); 
+  draw(); 
+  requestAnimationFrame(loop); 
+}
+
+// ----------------- UI wiring -----------------
+
+document.getElementById('speedSlider').addEventListener('input', (e) => { timeScale = Number(e.target.value); });
+document.getElementById('pauseBtn').addEventListener('click', () => { 
+  simulationPaused = !simulationPaused; 
+  document.getElementById('pauseBtn').innerText = simulationPaused ? 'Возобновить' : 'Пауза'; 
+});
+document.getElementById('stepBtn').addEventListener('click', () => { 
+  if (!simulationPaused) simulationPaused = true; 
+  update(); 
+  draw(); 
+});
+document.getElementById('resetChartsBtn').addEventListener('click', () => { 
+  Object.values(graphCharts).forEach(c => { 
+    c.data.labels = []; 
+    c.data.datasets[0].data = []; 
+    c.update('none'); 
+  }); 
+  simulationLog = []; // Очищаем историю
+  alert('История данных очищена.');
+});
+
+document.getElementById('exportBtn').addEventListener('click', () => {
+  if (simulationLog.length === 0) {
+    alert("Нет данных для экспорта. Запустите симуляцию и подождите накопления статистики.");
+    return;
+  }
+
+  const headers = ['Generation', 'TimeInGen(s)', 'AliveAgents', 'AvgHealth', 'AvgHunger', 'AppleCount', 'AvgMaxQ', 'LeaderGenes'];
+  const rows = [headers.join(',')];
+
+  // Проходим по всему массиву истории
+  simulationLog.forEach(entry => {
+    const row = [
+      entry.generation,
+      entry.timeInGeneration,
+      entry.aliveAgents,
+      entry.avgHealth,
+      entry.avgHunger,
+      entry.appleCount,
+      entry.avgMaxQ,
+      entry.leaderGenes
+    ];
+    rows.push(row.join(','));
+  });
+
+  const csv = rows.join('\n');
+  
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); 
+  a.href = url; 
+  a.download = `full_training_history_${new Date().toISOString().slice(0,19).replace(/:/g,"-")}.csv`; 
+  a.click(); 
+  URL.revokeObjectURL(url);
+});
+
+// ----------------- Bootstrapping -----------------
+createGraphs(); 
+initAgents(); 
+loop();
+
+</script>
+</body>
+</html>
